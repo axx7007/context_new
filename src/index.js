@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {data} from './mack.js'
+
+export const Kolhoz = createContext();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Kolhoz.Provider value={data}>
+      <App />
+    </Kolhoz.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
