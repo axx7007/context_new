@@ -7,13 +7,14 @@ const Add = () => {
 
   const onAdd = () => {
     var AddData = { id: data.length + 1, name: name, price: price };
-    setData([...data, AddData]);
+    if (name.length !== 0 && price.length !== 0) {
+      setData([...data, AddData]);
+    }
     setName("");
     setPrice("");
   };
   return (
     <div>
-        
       <input
         value={name}
         placeholder="name"
