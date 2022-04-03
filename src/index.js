@@ -1,17 +1,16 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {data} from './mack.js'
-
-export const Kolhoz = createContext();
+import {KinoProvider} from './context'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Kolhoz.Provider value={data}>
+    <KinoProvider>
+
       <App />
-    </Kolhoz.Provider>
+    </KinoProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

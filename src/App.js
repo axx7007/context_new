@@ -1,10 +1,14 @@
 import React from 'react'
-import Test from './Test';
-
+import Movie from './Movie';
+import Navbar from './Navbar'
+import Add from './Add'
 function App() {
   return (
     <div >
-        <Test />
+      <Navbar />
+      <Add/>
+      <Movie />
+
     </div>
   );
 }
